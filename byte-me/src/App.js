@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/login';
 import Home from './components/Home';
 import SwipingFeature from './components/SwipingFeature'; // Import the new component
-import "./styles.css";
+import "./App.css";
 import { useEffect, useState } from 'react'
 
 function App() {
