@@ -1,4 +1,5 @@
 import React from "react"
+import YelpSearch from "./YelpSearch"
 import "./styles.css"
 import { Stack } from "./components/stack"
 import styled from "@emotion/styled"
