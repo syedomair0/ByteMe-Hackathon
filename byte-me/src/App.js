@@ -1,5 +1,8 @@
 import React from "react"
 import YelpSearch from "./YelpSearch"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './pages/about'; // Adjust the import path if your file structure is different
+import Home from './components/Home';
 import "./styles.css"
 import { Stack } from "./components/stack"
 import styled from "@emotion/styled"
@@ -53,7 +56,13 @@ export default function App() {
           🍩
         </Item>
       </Wrapper>
-
+      <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+    
       <button onClick={handleSwipeLeft} style={{ position: "absolute", bottom: "20px", left: "50%", transform: "translateX(-50%)" }}>Swipe Left</button>
 
       {/* Swipe right button */}
