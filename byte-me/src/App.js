@@ -1,26 +1,27 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/login';
-import Home from './components/Home';
-import SwipingFeature from './components/SwipingFeature'; // Import the new component
-import "./styles.css";
-import { useEffect, useState } from 'react'
+import React from 'react';
+import './App.css'; // Make sure to create an App.css file for your styles
+import image from '../src/assets/cute2.png'
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false)
-  const [email, setEmail] = useState('')
-
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-        <Route path="/" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
-          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
-          <Route path="/swipe" element={<SwipingFeature />} /> 
-        </Routes>
-      </Router>
+    <div className="app">
+      <header className="app-header">
+        <h1>Find Your Perfect Match</h1>
+        <h2>with</h2>
+        <h3>TakeMe Dating app</h3>
+        <h3>Try me</h3>
+        <h3>Text me</h3>
+        <h3>Take me</h3>
+      </header>
+      <main className="app-content">
+        <div className="app-phone">
+          {/* You can use an image here or create an illustration with CSS */}
+          <img src={image} alt="Phone Illustration" />
+        </div>
+        <button className="sign-up-button">Sign Up</button>
+      </main>
     </div>
   );
-};
+}
 
 export default App;
