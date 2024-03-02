@@ -8,27 +8,23 @@ const YelpSearch = () => {
     }, []);
 
     const fetchRestaurants = async () => {
-        const apiKey = 'YOUR_YELP_API_KEY'; // Replace with your Yelp API key
-        const apiUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=YOUR_LOCATION`;
-
+        const location = 'St. Louis'; // Or dynamically set this based on user input or geolocation
+        const apiUrl = `/api/yelp?location=${location}`;
+      
         try {
-            const response = await fetch(apiUrl, {
-                headers: {
-                    Authorization: `Bearer ${apiKey}`,
-                    "Content-Type": "application/json",
-                },
-            });
-
-            if (!response.ok) {
-                throw new Error('Something went wrong');
-            }
-
-            const data = await response.json();
-            setRestaurants(data.businesses);
+          const response = await fetch(apiUrl);
+      
+          if (!response.ok) {
+            throw new Error('Failed to fetch data');
+          }
+      
+          const data = await response.json();
+          setRestaurants(data.businesses);
         } catch (error) {
-            console.error('Error fetching data from Yelp:', error);
+          console.error('Error fetching data:', error);
         }
-    };
+      };
+      
 
     return (
         <div>
