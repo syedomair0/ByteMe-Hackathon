@@ -1,18 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './pages/about';
+import Login from './pages/login';
 import Home from './components/Home';
 import SwipingFeature from './components/SwipingFeature'; // Import the new component
 import "./styles.css";
+import { useEffect, useState } from 'react'
 
-const App = () => {
+function App() {
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [email, setEmail] = useState('')
+
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/swipe" element={<SwipingFeature />} /> {/* New route for swiping */}
+        <Route path="/" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
+          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
+          <Route path="/swipe" element={<SwipingFeature />} /> 
         </Routes>
       </Router>
     </div>
