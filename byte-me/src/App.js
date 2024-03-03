@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/login';
 import Home from './components/Home';
 import ResultPage from './ResultPage';
+import Chat from './Chat';
 import "./App.css";
 import CasinoRoller from './CasinoRoller';
 import { useEffect, useState } from 'react'
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
           <Route path="/casino" element={<CasinoRoller />} />
           <Route path="/result" element={<ResultPage />} /> 
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </Router>
     </div>
