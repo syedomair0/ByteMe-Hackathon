@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import background from '../assets/waves.svg'
 
 const Login = (props) => {
   const [email, setEmail] = useState('')
@@ -14,6 +15,9 @@ const Login = (props) => {
   }
 
   return (
+    <div className={'bg'} style={{
+      backgroundImage: `url(${background})`,
+    }}>
     <div className={'mainContainer'}>
       <div className={'titleContainer'}>
         <div>Login</div>
@@ -45,8 +49,9 @@ const Login = (props) => {
           type="button" 
           onClick={onButtonClick} 
           value={'Log In'} 
-          style={{ height: '60px', width: '400px', fontSize: 'large', backgroundColor: '#4f566f', color: 'white' }} 
+          style={{ height: '60px', width: '400px', fontSize: 'large'}} 
         />
+        </div>
       </div>
     </div>
   )
