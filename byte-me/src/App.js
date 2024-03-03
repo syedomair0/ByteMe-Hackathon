@@ -2,13 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/login';
 import Home from './components/Home';
-<<<<<<< HEAD
-
-=======
 import ResultPage from './ResultPage';
 import "./App.css";
 import CasinoRoller from './CasinoRoller';
->>>>>>> dev
+
 import { useEffect, useState } from 'react'
 
 function App() {

@@ -4,12 +4,15 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color:#feebd1; /* Adding a background color for better contrast */
   }
   
   .slot {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Ensures that only the current selection is visible */
+    position: relative; /* Required for absolute positioning of pseudo-elements */
   }
   
   .activity, .cuisine {
@@ -18,30 +21,63 @@
     padding: 10px;
     border: 2px solid #ddd;
     border-radius: 5px;
-    animation: stopEffect 0.3s ease-out;
+    background-color: #fdd9c3; /* Adds background color to make text more readable */
+    position: relative; /* Enables absolute positioning of pseudo-elements */
+    animation: stopEffect 0.3s ease-out forwards; /* Adjusts animation to maintain end state */
   }
   
+  /* Styling for buttons */
   .controls button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
   }
   
+  .controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Animation for rolling effect */
   @keyframes rolling {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
   }
   
+  /* Animation for scaling effect on stop */
   @keyframes stopEffect {
-    0% { transform: scale(1); }
+    0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+  }
+  
+  /* Adding pseudo-elements for next options visualization */
+  .activity::after, .cuisine::after {
+    content: attr(data-next); /* Uses data attribute for dynamic content */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    color: #666; /* Lighter text color for next options */
   }
   
   .rolling {
-    animation-name: rolling;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation: rolling 1s ease-in-out forwards; /* Adjusts animation to maintain end state */
+  }
+  
+  /* Enhancements for visibility and aesthetics */
+  .activity, .cuisine {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+  }
+  
+  .activity:hover, .cuisine:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
   }
   
