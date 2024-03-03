@@ -1,18 +1,26 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom'; // Import useLocation
+import { useLocation } from 'react-router-dom';
 
 const ResultPage = () => {
-  const location = useLocation(); // Hook to access the current location and state
-  const { activity, cuisine } = location.state; // Destructure the passed state
+  const location = useLocation();
+  const { activity, cuisine } = location.state;
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}> {/* Center the content */}
       <h2>Activity: {activity}</h2>
       <h2>Cuisine: {cuisine}</h2>
-      <iframe src="https://storage.googleapis.com/maps-solutions-2r30oake86/neighborhood-discovery/lk9s/neighborhood-discovery.html"
-        width="600" height="450" style={{border:0}} loading="lazy"></iframe>
+      {/* Iframe for Google Map */}
+      <div style={{ margin: 'auto', width: '80%', height: '500px', border: '0' }}> {/* Adjust width, height as needed */}
+        <iframe 
+          src="https://storage.googleapis.com/maps-solutions-2r30oake86/neighborhood-discovery/a0qz/neighborhood-discovery.html"
+          width="100%"
+          height="100%"
+          style={{ border: '0' }} // Ensures no border
+          loading="lazy"
+          title="Neighborhood Discovery"
+        ></iframe>
+      </div>
     </div>
-
   );
 };
 
