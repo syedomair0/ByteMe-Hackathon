@@ -1,6 +1,7 @@
 // src/components/LocationSelector.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './LocationSelector.css';
 
 const LocationSelector = () => {
   const [selectedLocations, setSelectedLocations] = useState([]);
