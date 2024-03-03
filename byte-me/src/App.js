@@ -5,7 +5,6 @@ import Home from './components/Home';
 import ResultPage from './ResultPage';
 import "./App.css";
 import CasinoRoller from './CasinoRoller';
-
 import { useEffect, useState } from 'react'
 
 function App() {
