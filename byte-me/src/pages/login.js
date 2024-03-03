@@ -40,7 +40,7 @@ const Login = (props) => {
       </div>
       <br />
       <div className={'inputContainer'}>
-        <input className={'inputButton'} type="button" onClick={onButtonClick} value={'Log in'} />
+        <input className={'inputButton'} type="button" onClick={onButtonClick} value={'Log In'}style={{ height: '60px', width: '400px', fontSize: 'large' }} />
       </div>
     </div>
   )
