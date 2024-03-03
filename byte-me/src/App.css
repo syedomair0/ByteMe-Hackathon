@@ -1,63 +1,49 @@
-.mainContainer {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* App.css */
+.app {
+  text-align: center;
+  background-color: #fad7e7; /* Replace with the exact color from your design */
+  color: #333;
   height: 100vh;
-}
-
-.titleContainer {
   display: flex;
   flex-direction: column;
-  font-size: 64px;
-  font-weight: bolder;
-  align-items: center;
   justify-content: center;
-}
-
-.resultContainer,
-.historyItem {
-  flex-direction: row;
-  display: flex;
-  width: 400px;
   align-items: center;
-  justify-content: space-between;
 }
 
-.historyContainer {
-  flex-direction: column;
-  display: flex;
-  height: 200px;
-  align-items: center;
-  flex-grow: 5;
-  justify-content: flex-start;
+.app-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-.buttonContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 260px;
+.app-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
-.inputContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+.app-header h3 {
+  font-size: 1rem;
+  margin: 0;
 }
 
-.inputContainer > .errorLabel {
-  color: red;
-  font-size: 12px;
+.app-content {
+  margin-top: 20px;
 }
 
-.inputBox {
-  height: 48px;
-  width: 400px;
-  font-size: large;
-  border-radius: 8px;
-  border: 1px solid grey;
-  padding-left: 8px;
+.app-phone img {
+  width: 50%; /* Adjust as necessary */
+  margin-bottom: 20px;
+}
+
+.sign-up-button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-up-button:hover {
+  background-color: #e7e7e7;
 }
