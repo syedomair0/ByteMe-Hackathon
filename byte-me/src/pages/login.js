@@ -10,7 +10,7 @@ const Login = (props) => {
   const navigate = useNavigate()
 
   const onButtonClick = () => {
-    // You'll update this function later...
+    navigate('/casino');
   }
 
   return (
