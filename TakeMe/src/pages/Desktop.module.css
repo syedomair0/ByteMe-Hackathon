@@ -1,0 +1,95 @@
+.welcomeBackPlease {
+  position: absolute;
+  top: 366px;
+  left: 86px;
+  white-space: pre-wrap;
+}
+.trymeTextmeTakeme {
+  position: absolute;
+  top: 271px;
+  left: 89px;
+  font-size: 36px;
+  font-family: var(--font-open-sans);
+  color: #e8a28b;
+}
+.pngImage1 {
+  position: absolute;
+  top: 282px;
+  left: 691px;
+  border-radius: 27px;
+  width: 706px;
+  height: 473px;
+  object-fit: cover;
+}
+.desktop1Child,
+.desktop1Item {
+  position: absolute;
+  top: 526px;
+  left: 89px;
+  background-color: var(--color-white);
+  border: 1px solid #c2bbbb;
+  box-sizing: border-box;
+  width: 554px;
+  height: 74px;
+}
+.desktop1Item {
+  top: 625px;
+  left: 118px;
+  border: 1px solid #e5e5e5;
+  width: 13px;
+  height: 13px;
+}
+.desktop1Inner,
+.rectangleDiv {
+  position: absolute;
+  top: 714px;
+  width: 129px;
+  height: 54px;
+}
+.desktop1Inner {
+  left: 85px;
+  background-color: #6e460e;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
+}
+.rectangleDiv {
+  left: 247px;
+  background-color: var(--color-white);
+  border: 1px solid #c9a1a1;
+  box-sizing: border-box;
+}
+.frameDiv {
+  position: absolute;
+  top: 245px;
+  left: 1239px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.untitledDesign1 {
+  position: absolute;
+  top: 32px;
+  left: 85px;
+  border-radius: 39px;
+  width: 209px;
+  height: 181px;
+  object-fit: cover;
+}
+.desktop1Child1 {
+  position: absolute;
+  top: 0;
+  left: 662px;
+  background-color: rgba(229, 229, 229, 0.41);
+  width: 778px;
+  height: 1024px;
+}
+.desktop1 {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: var(--font-roboto);
+}
