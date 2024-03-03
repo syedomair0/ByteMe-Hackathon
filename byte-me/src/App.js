@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
           <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
           <Route path="/casino" element={<CasinoRoller />} />
-          <Route path="/result" element={<ResultPage />} />
+          <Route path="/result" element={<ResultPage />} /> 
         </Routes>
       </Router>
     </div>
