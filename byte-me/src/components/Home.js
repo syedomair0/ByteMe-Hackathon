@@ -1,17 +1,18 @@
-import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
-import background from '../assets/waves.svg'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import background from '../assets/waves.svg';
 import people from '../assets/people.png';
 import logo from '../assets/logo.jpeg';
 import Heart from "react-animated-heart"; 
 
 const Home = (props) => {
-  const { loggedIn, email } = props
-  const navigate = useNavigate()
+  const { loggedIn, email } = props;
+  const navigate = useNavigate();
 
   const onButtonClick = () => {
-    // You'll update this function later
-  }
+    navigate('/login');
+  };
+  
   const [isClick, setClick] = useState(false);
 
   return (
@@ -27,6 +28,7 @@ const Home = (props) => {
           <div>Where Love Takes the Lead! Your go-to app for spontaneous, fun-filled date plans tailored just for you. Let's make every date an adventure!</div>
         </div>
         <img src={people} alt="People" style={{ width: '350px', height: 'auto', marginTop: '20px' }} />
+        <button onClick={onButtonClick} style={{ marginTop: '20px' }}>Click Me</button>
       </div>
       <div className="heart" style={{ textAlign: 'center', marginTop: '20px' }}>
         <Heart isClick={isClick} onClick={() => setClick(!isClick)} style={{ height: '60px', width: '400px', fontSize: 'large'}} />
@@ -35,4 +37,4 @@ const Home = (props) => {
   );
 }
 
-export default Home
+export default Home;
