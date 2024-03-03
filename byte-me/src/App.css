@@ -13,6 +13,16 @@
   font-weight: bolder;
   align-items: center;
   justify-content: center;
+  color: #F58E95;
+  text-shadow: 
+    -2px -2px 0 #4F566F,  
+    2px -2px 0 #4F566F,
+    -2px 2px 0 #4F566F,
+    2px 2px 0 #4F566F,
+    -4px -4px 0 #4F566F,  
+    4px -4px 0 #4F566F,
+    -4px 4px 0 #4F566F,
+    4px 4px 0 #4F566F;
 }
 
 .resultContainer,
