@@ -1,17 +1,25 @@
-// src/components/Chat.js
-
+// Chat.js
 import React, { useState } from 'react';
-import './Chat.css'; 
+import axios from 'axios';
+import './Chat.css';
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
-  const sendMessage = (e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
-    if (input.trim() !== '') {
-      setMessages([...messages, input]);
+    const userMessage = input.trim();
+    if (userMessage !== '') {
+      setMessages(messages.concat({ text: userMessage, sender: 'user' }));
       setInput('');
+
+      try {
+        const response = await axios.post('http://localhost:5001/generate-response', { userMessage });
+        setMessages(messages.concat({ text: response.data.response, sender: 'bot' }));
+      } catch (error) {
+        console.error('Error fetching the date plan:', error);
+      }
     }
   };
 
@@ -19,8 +27,8 @@ const Chat = () => {
     <div className="chat-container">
       <div className="messages">
         {messages.map((message, index) => (
-          <div key={index} className="message">
-            {message}
+          <div key={index} className={`message ${message.sender}`}>
+            {message.text}
           </div>
         ))}
       </div>
